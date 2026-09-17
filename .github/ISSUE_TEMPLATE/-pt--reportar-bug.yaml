@@ -1,0 +1,89 @@
+name: Relatório de bug
+description: Crie um relatório para nos ajudar a melhorar.
+labels:
+  - bug
+  - pt-br
+body:
+  - type: checkboxes
+    id: termos
+    attributes:
+      label: Bem-vindo!
+      description: |
+        O rastreador de problemas é apenas para relatar bugs e solicitações de recursos.
+        Para perguntas de suporte, acesse:
+          - [Comunidade](https://evolutionfoundation.com.br/community)
+          - [WhatsApp Suporte](https://wa.me/553196219989)
+          <br/>
+
+        **NÃO ABRA UM PROBLEMA PARA PERGUNTAS GERAIS DE SUPORTE.**
+
+      options:
+        - label: Sim, pesquisei problemas semelhantes no [GitHub](https://github.com/evolution-foundation/evolution-go/issues) e não encontrei nenhum.
+          required: true
+
+  - type: textarea
+    attributes:
+      label: O que você fez?
+      description: |
+        - Respeite o modelo de problema tanto quanto possível.
+        - O título deve ser curto e descritivo.
+        - Explique as condições que o levaram a reportar este problema.
+        - Seja claro e conciso.
+      placeholder: Descreva detalhadamente o problema que você encontrou.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: O que você esperava?
+      placeholder: Descreva o que você esperava que acontecesse.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: O que você observou ao invés do que esperava?
+      placeholder: Explique o que realmente acontece quando você segue os passos acima.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Capturas de Tela/Vídeos
+      placeholder: Se possível, adicione capturas de tela ou vídeos que ilustrem o problema.
+
+  - type: textarea
+    attributes:
+      label: Qual versão você está usando?
+      description: Verifique o arquivo VERSION ou o log de inicialização.
+      placeholder: ex. 0.6.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: select
+    attributes:
+      label: Qual é o seu ambiente?
+      options:
+        - Linux
+        - Docker
+        - Mac
+        - Windows
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Se aplicável, cole a saída do log
+      description: Por favor, anexe os logs que possam estar relacionados ao problema.
+      placeholder: Cole aqui o log da aplicação.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Notas Adicionais
+      description: Inclua qualquer outra informação que possa ser útil.
+    validations:
+      required: false

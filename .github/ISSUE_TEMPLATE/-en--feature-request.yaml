@@ -1,0 +1,62 @@
+name: Feature Request
+description: Suggest ideas for the project.
+labels:
+  - enhancement
+  - en
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Welcome!
+      description: '**DO NOT OPEN FOR GENERAL SUPPORT QUESTIONS.**'
+      options:
+        - label: Yes, I have searched for similar requests on [GitHub](https://github.com/evolution-foundation/evolution-go/issues) and found none.
+          required: true
+
+  - type: dropdown
+    attributes:
+      label: What type of feature?
+      options:
+        - Integration
+        - Functionality
+        - Endpoint
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What is the motivation for the request?
+      description: |
+        What problem does the feature seek to solve?
+        Clearly describe the functionality you want implemented.
+      placeholder: Detailed description
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Usage Examples
+      description: Provide specific examples of how this functionality could be used.
+      placeholder: text - image - video - flowcharts
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: How should the feature be developed?
+      description: |
+        Should it be inserted directly into the code?
+        If you have implementation ideas, please share them here.
+      placeholder: Insert feature ideas here
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional Notes
+      description: Any other information relevant to your request.
+      placeholder: Insert your observations here.
+    validations:
+      required: false

@@ -1,0 +1,62 @@
+name: Solicitação de recursos
+description: Sugira ideias para o projeto.
+labels:
+  - enhancement
+  - pt-br
+body:
+  - type: checkboxes
+    id: termos
+    attributes:
+      label: Bem-vindo!
+      description: '**NÃO ABRA PARA PERGUNTAS GERAIS DE SUPORTE.**'
+      options:
+        - label: Sim, pesquisei solicitações semelhantes no [GitHub](https://github.com/evolution-foundation/evolution-go/issues) e não encontrei nenhum.
+          required: true
+
+  - type: dropdown
+    attributes:
+      label: Qual tipo de recurso?
+      options:
+        - Integração
+        - Funcionalidade
+        - Endpoint
+        - Performance
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Qual a motivação para a solicitação?
+      description: |
+        Qual problema o recurso busca resolver?
+        Descreva claramente a funcionalidade que você deseja que seja implementada.
+      placeholder: Descrição detalhada
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Exemplos de Uso
+      description: Forneça exemplos específicos de como essa funcionalidade poderia ser utilizada.
+      placeholder: texto - imagem - video - fluxogramas
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Como o recurso deve ser desenvolvido?
+      description: |
+        Deve ser inserido diretamente no código?
+        Se você tem ideias de implementação, por favor compartilhe aqui.
+      placeholder: Insira ideias para o recurso
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Notas Adicionais
+      description: Qualquer outra informação relevante para a sua solicitação.
+      placeholder: Insira aqui as suas observações.
+    validations:
+      required: false

@@ -1,0 +1,89 @@
+name: Bug Report
+description: Create a report to help us improve.
+labels:
+  - bug
+  - en
+body:
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Welcome!
+      description: |
+        The issue tracker is only for reporting bugs and feature requests.
+        For support questions, please visit:
+          - [Community](https://evolutionfoundation.com.br/community)
+          - [WhatsApp Support](https://wa.me/553196219989)
+          <br/>
+
+        **DO NOT OPEN AN ISSUE FOR GENERAL SUPPORT QUESTIONS.**
+
+      options:
+        - label: Yes, I have searched for similar issues on [GitHub](https://github.com/evolution-foundation/evolution-go/issues) and found none.
+          required: true
+
+  - type: textarea
+    attributes:
+      label: What did you do?
+      description: |
+        - Respect the issue template as much as possible.
+        - The title should be short and descriptive.
+        - Explain the conditions that led you to report this issue.
+        - Be clear and concise.
+      placeholder: Describe the problem you encountered in detail.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What did you expect?
+      placeholder: Describe what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What did you observe instead of what you expected?
+      placeholder: Explain what actually happens when you follow the steps above.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots/Videos
+      placeholder: If possible, add screenshots or videos that illustrate the problem.
+
+  - type: textarea
+    attributes:
+      label: Which version are you using?
+      description: Check the VERSION file or the startup log.
+      placeholder: e.g. 0.6.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: select
+    attributes:
+      label: What is your environment?
+      options:
+        - Linux
+        - Docker
+        - Mac
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: If applicable, paste the log output
+      description: Please attach any logs related to the issue.
+      placeholder: Paste the application log here.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional Notes
+      description: Include any other information you think might be useful.
+    validations:
+      required: false
